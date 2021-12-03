@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RestfulApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Opzioni di selezione per lo spinner -->
+    <string-array name="sp_azioni">
+        <item>Home</item>
+        <item>Vedi tutte le persone registrate</item>
+        <item>Vedi una persona registrata a scelta</item>
+        <item>Registra una nuova persona</item>
+        <item>Modifica una persona</item>
+        <item>Cancella una persona</item>
+    </string-array>
+</resources>
