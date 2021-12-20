@@ -83,6 +83,7 @@ public class SelectFragment extends Fragment implements AdapterView.OnItemSelect
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_select, container, false);
         //tv_select = v.findViewById(R.id.tv_select);
+        //Creazione dello Spinner con le options dichiarate in string.xml
         sp_select = v.findViewById(R.id.sp_select);
         ArrayAdapter<CharSequence> sp_adapter = ArrayAdapter.createFromResource(getActivity(),R.array.sp_azioni,android.R.layout.simple_spinner_item);
         sp_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

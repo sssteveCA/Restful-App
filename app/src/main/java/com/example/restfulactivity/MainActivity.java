@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Log.d("MainActivity","onCreate");
         setContentView(R.layout.activity_main);
+        //RelativeLayout activity_main.xml
         mainLayout = findViewById(R.id.mainLayout);
 
         bt_esci = findViewById(R.id.bt_esci);

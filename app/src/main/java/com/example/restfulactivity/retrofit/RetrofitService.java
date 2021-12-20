@@ -32,7 +32,7 @@ import retrofit2.http.Path;
 //Classe che interroga le API RESTful di Laravel
 public class RetrofitService implements Callback {
 
-    public static final String ipLocale = "http://192.168.0.20:8000"; //Indirizzo IP locale
+    public static final String ipLocale = "http://192.168.0.23:8000"; //Indirizzo IP locale
 
     private Retrofit.Builder retrofitBuilder;
     private OkHttpClient.Builder httpClient;
@@ -128,6 +128,7 @@ public class RetrofitService implements Callback {
     public static String messaggioErrore(Response response) throws IOException {
         String msg = "";
         String msgJson = ""; //messaggio di errore come stringa JSON
+        //possibile risposta in formato
         InputStream is = response.errorBody().byteStream();
         InputStreamReader isr = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(isr);
