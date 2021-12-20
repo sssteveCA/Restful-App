@@ -6,6 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.stream.MalformedJsonException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -128,7 +130,6 @@ public class RetrofitService implements Callback {
     public static String messaggioErrore(Response response) throws IOException {
         String msg = "";
         String msgJson = ""; //messaggio di errore come stringa JSON
-        //possibile risposta in formato
         InputStream is = response.errorBody().byteStream();
         InputStreamReader isr = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(isr);
@@ -141,8 +142,12 @@ public class RetrofitService implements Callback {
         isr.close();
         is.close();
         msgJson = error.toString();
-        JsonObject jo = new JsonParser().parse(msgJson).getAsJsonObject();
-        msg = jo.get("msg").getAsString();
+        try{
+            JsonObject jo = new JsonParser().parse(msgJson).getAsJsonObject();
+            msg = jo.get("msg").getAsString();
+        }catch(JsonSyntaxException jse){
+            msg = "Errore sconosciuto";
+        }
         return msg;
     }//public static String messaggioErrore(Response response) throws IOException {
 
