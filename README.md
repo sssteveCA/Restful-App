@@ -1,3 +1,1 @@
-Questa applicazione per Android interagisce con l'applicazione Laravel "Laravel-api-resource" che fornisce servizi REST. 
-Utilizza i metodi GET,POST,PUT e DELETE ed effettua le operazioni CRUD(Create, Read, Update, Delete)
-per leggere e scrivere su un Database.
+This Android application interacts with the Laravel "Laravel-api-resource" application which provides REST services. It uses the GET, POST, PUT and DELETE methods and performs the CRUD (Create, Read, Update, Delete) operations to read and write to a Database.
